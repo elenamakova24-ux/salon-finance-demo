@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183e35">
+  <title>Финансы салона</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23183e35'/%3E%3Ctext x='10' y='29' fill='%23fff' font-size='27'%3Es%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./responsive.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Перейти к содержимому</a>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-mark">s<span>•</span></span><span>салон<span class="brand-sub">ФИНАНСЫ В ПОРЯДКЕ</span></span></a>
+    <div class="workspace"><span class="workspace-icon">✦</span><div><strong id="salon-name">Ваш салон</strong><span>Финансовое пространство</span></div></div>
+    <span class="nav-caption">УПРАВЛЕНИЕ</span>
+    <nav id="navigation" aria-label="Главное меню"></nav>
+    <div class="sidebar-bottom"><div class="local-note"><span class="status-dot"></span> Локальный прототип<p>Данные хранятся в этом браузере. Скачивайте резервную копию в настройках</p></div><button class="profile" data-nav="settings"><span class="avatar">В</span><span>Владелец салона<small>Настройки пространства</small></span><span>↗</span></button></div>
+  </aside>
+  <div class="shell">
+    <header class="topbar"><span class="breadcrumb">Мой бизнес <span>/</span> <strong id="breadcrumb-current">Обзор</strong></span><div class="topbar-right"><span id="save-status" class="save-status">● Локальное хранение</span><span class="avatar small">В</span></div></header>
+    <main id="main" tabindex="-1"></main>
+    <footer>Финансы салона <span>Пространство для спокойных решений</span></footer>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow">ФИНАНСЫ САЛОНА</span><button type="button" class="icon-button" id="close-dialog" aria-label="Закрыть">×</button></div><h2 id="dialog-title"></h2><p id="dialog-description" class="muted"></p><form id="entry-form"><div id="fields"></div><p id="form-error" role="alert"></p><div class="dialog-actions"><button type="button" class="button secondary" id="cancel-dialog">Отмена</button><button type="submit" class="button" id="submit-form">Сохранить</button></div></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+</body>
+</html>

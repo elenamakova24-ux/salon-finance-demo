@@ -1,0 +1,23 @@
+/* Card layout keeps money and actions visible on narrow screens. */
+.muted, .subtitle { color: #74816a; }
+.row small, td small { color: #738165; }
+.tag { color: #5a7148; }
+.stat-foot { color: #768567; }
+.chart-footer { color: #748565; }
+@media (max-width: 640px) {
+  input, select { font-size: 16px; }
+  .table-wrap { overflow: visible; }
+  table, tbody { display: block; width: 100%; white-space: normal; }
+  thead { display: none; }
+  tbody tr { display: block; padding: 16px 18px; border-top: 1px solid #e9eddf; }
+  td { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 6px 0; border: 0; font-size: 12px; text-align: right; }
+  td:first-child { display: block; text-align: left; padding-bottom: 12px; }
+  td:first-child strong { overflow-wrap: anywhere; }
+  td:not(:first-child)::before { content: attr(data-label); color: #819172; font-size: 9px; text-align: left; font-weight: 400; }
+  td small { display: none; }
+  td:first-child small { display: block; }
+  td .tag { max-width: 62%; overflow-wrap: anywhere; text-align: right; }
+  td .tiny-actions { justify-content: flex-end; }
+  td .button.small { min-height: 36px; padding-inline: 14px; }
+  .nav-button { min-height: 51px; }
+}
